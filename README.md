@@ -50,3 +50,9 @@ npm test
 ```
 
 For the first browser test run, install Chromium using `npx playwright install chromium`. Tests run against an isolated Vite server on port 4173 with mocked API responses; they do not modify the real database. Run `npm run preview` to inspect the production build (the preview server needs a separately configured `/api` reverse proxy).
+
+## Demo collection
+
+To populate the local catalog with nine coordinated demo products, run `npm run seed:demo` in the sibling `jorval-store-api` directory. It creates the Home objects, Everyday carry, and Soft living categories and removes the old serialization test fixture. The seed is repeatable; see the API's `scripts/README.md` for its exact behavior.
+
+The original product illustrations are bundled in `public/demo/` and are served at `/demo/`. Keep these assets with the frontend when deploying a database that uses the demo catalog.
